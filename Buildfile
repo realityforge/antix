@@ -1,4 +1,4 @@
-gem 'buildr-iidea', :version => '=> 0.0.4'
+gem 'buildr-iidea', :version => '=> 0.0.6'
 
 require 'buildr_iidea'
 
