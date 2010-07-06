@@ -11,7 +11,7 @@
   Copy one property to another if the from property is defined.
   Useful for recursive property expansion. 
   -->
-  <macrodef name="propertycopy">
+  <macrodef name="property-copy">
     <attribute name="name"/>
     <attribute name="from"/>
     <sequential>
@@ -46,7 +46,10 @@
       <tstamp prefix="phase.@{phase}.start">
         <format property="time" pattern="HH:mm:ss"/>
       </tstamp>
-      <echo>Starting phase '@{phase}' at ${phase.@{phase}.start.time}</echo>
+      <condition property="phase.@{phase}.timing.log.level" value="warning" else="verbose">
+        <isset property="timing.check"/>
+      </condition>
+      <echo level="${phase.@{phase}.timing.log.level}">Starting phase '@{phase}' at ${phase.@{phase}.start.time}</echo>
     </sequential>
   </macrodef>
 
@@ -57,7 +60,7 @@
       <tstamp prefix="phase.@{phase}.end">
         <format property="time" pattern="HH:mm:ss"/>
       </tstamp>
-      <echo>Completing phase '@{phase}' at ${phase.@{phase}.end.time} (Duration = ${phase.@{phase}.timer.duration}ms)</echo>
+      <echo level="${phase.@{phase}.timing.log.level}">Completing phase '@{phase}' at ${phase.@{phase}.end.time} (Duration = ${phase.@{phase}.timer.duration}ms)</echo>
     </sequential>
   </macrodef>
 
