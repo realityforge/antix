@@ -19,4 +19,5 @@ define "antix" do
   compile.with 'org.apache.ant:ant:jar:1.8.1'
 
   package(:jar)
+  package(:sources)
 end
