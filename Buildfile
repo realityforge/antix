@@ -6,7 +6,7 @@ repositories.remote << "http://www.ibiblio.org/maven2/"
 
 desc "A set of ant tasks that are used across a range of projects"
 define "antix" do
-  project.version = `git describe`.strip.split('-').first
+  project.version = '1.0.0'
   project.group = "org.realityforge"
 
   project.no_ipr
