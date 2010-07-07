@@ -3,7 +3,6 @@
   <taskdef name="forEach" classname="org.realityforge.antix.ForEachTask"/>
   <taskdef name="if" classname="org.realityforge.antix.IfTask"/>
   <taskdef name="toAscii" classname="org.realityforge.antix.ToAsciiTask"/>
-  <taskdef name="truncate" classname="org.realityforge.antix.TruncateTask"/>
   <taskdef name="selectRegex" classname="org.realityforge.antix.SelectRegexTask"/>
   <taskdef name="timer" classname="org.realityforge.antix.TimerTask"/>
 
