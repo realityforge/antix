@@ -1,7 +1,3 @@
-gem 'buildr-iidea', :version => '=> 0.0.6'
-
-require 'buildr_iidea'
-
 repositories.remote << "http://www.ibiblio.org/maven2/"
 
 desc "A set of ant tasks that are used across a range of projects"
