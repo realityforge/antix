@@ -8,7 +8,7 @@
 
   <!--
   Copy one property to another if the from property is defined.
-  Useful for recursive property expansion. 
+  Useful for recursive property expansion.
   -->
   <macrodef name="property-copy">
     <attribute name="name"/>
@@ -41,7 +41,7 @@
   <macrodef name="start-phase">
     <attribute name="phase"/>
     <sequential>
-      <timer property="phase.@{phase}.timer" stop="false"/> 
+      <timer property="phase.@{phase}.timer" stop="false"/>
       <tstamp prefix="phase.@{phase}.start">
         <format property="time" pattern="HH:mm:ss"/>
       </tstamp>
@@ -55,7 +55,7 @@
   <macrodef name="end-phase">
     <attribute name="phase"/>
     <sequential>
-      <timer property="phase.@{phase}.timer" stop="true"/> 
+      <timer property="phase.@{phase}.timer" stop="true"/>
       <tstamp prefix="phase.@{phase}.end">
         <format property="time" pattern="HH:mm:ss"/>
       </tstamp>
