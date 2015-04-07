@@ -5,9 +5,6 @@ define 'antix' do
   project.version = '1.0.0'
   project.group = 'org.realityforge'
 
-  project.no_ipr
-  project.iml.local_repository_env_override = nil
-
   compile.options.source = '1.6'
   compile.options.target = '1.6'
   compile.options.lint = 'all'
