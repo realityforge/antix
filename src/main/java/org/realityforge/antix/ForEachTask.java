@@ -40,7 +40,8 @@ public class ForEachTask
       final MacroDef.Attribute attribute = new MacroDef.Attribute();
       attribute.setName( property );
       macroDef.addConfiguredAttribute( attribute );
-
+      if (values.isEmpty())
+         return;
       final String[] values = list.split( " " );
       for ( final String value : values )
       {
