@@ -2,7 +2,7 @@ repositories.remote << 'http://www.ibiblio.org/maven2/'
 
 desc 'A set of ant tasks that are used across a range of projects'
 define 'antix' do
-  project.version = '1.0.0'
+  project.version = '1.0.1'
   project.group = 'org.realityforge.antix'
 
   compile.options.source = '1.6'
