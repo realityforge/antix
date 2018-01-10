@@ -40,19 +40,18 @@ public class ForEachTask
       final MacroDef.Attribute attribute = new MacroDef.Attribute();
       attribute.setName( property );
       macroDef.addConfiguredAttribute( attribute );
-      if ( values.isEmpty() )
-      {
-         return;
-      }
       final String[] values = list.split( " " );
-      for ( final String value : values )
+      if ( 0 != values.length )
       {
-         final MacroInstance i = new MacroInstance();
-         i.setProject( getProject() );
-         i.setOwningTarget( getOwningTarget() );
-         i.setMacroDef( macroDef );
-         i.setDynamicAttribute( property, value );
-         i.execute();
+         for ( final String value : values )
+         {
+            final MacroInstance i = new MacroInstance();
+            i.setProject( getProject() );
+            i.setOwningTarget( getOwningTarget() );
+            i.setMacroDef( macroDef );
+            i.setDynamicAttribute( property, value );
+            i.execute();
+         }
       }
    }
 
